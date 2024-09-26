@@ -11,9 +11,14 @@ export function ShowBalance() {
     document.getElementById("balance").innerHTML = balance / LAMPORTS_PER_SOL;
   }
 
-    getAccountBalance();
+  // getAccountBalance();
 
-
+  useEffect(() => {
+    if (wallet.publicKey) {
+      getAccountBalance();
+    }
+  }, [wallet.connected]);
+  
   return (
     <div>
       Balance: <span id="balance"> </span>SOL
