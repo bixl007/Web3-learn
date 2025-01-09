@@ -1,16 +1,16 @@
 // SPDX-License-Identifier: MIT
 pragma solidity >=0.8.2 <0.9.0;
 
-contract Vehicle {
-    string public brand;
+import "./003_Vehicle.sol";
 
-    constructor(string memory _brand) {
-        brand = _brand;
+contract Truck is Vehicle {
+    uint numWheels;
+
+    constructor(string memory _brand, uint _numWheels) Vehicle(_brand) {
+        numWheels = _numWheels;
     }
 
-    function description() public virtual returns (string memory) {
-        return "Hii, I am a vehicle";
+    function description() public pure override returns (string memory) {
+        return "Hii, I am a Truck";
     }
 }
-
-
