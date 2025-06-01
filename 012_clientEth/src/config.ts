@@ -7,7 +7,7 @@ export const config = createConfig({
   chains: [mainnet],
   transports: {
     [mainnet.id]: http(
-      "https://eth-mainnet.g.alchemy.com/v2/7CLTtYA6ym7nUhydjLQiWkl0l7UPxbie"
+      "rpc-url"
     ),
   },
 });
