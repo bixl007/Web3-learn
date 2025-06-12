@@ -1,3 +1,13 @@
+out/
+cache/
+logs/
+node_modules/
+*.json
+!.gitignore
+!.foundry.toml
+.DS_Store
+Thumbs.db
+.vscode/
 .env
-node_modules
+.env.*
 dist
