@@ -28,4 +28,32 @@ contract StakingContractTest is Test {
         vm.expectRevert();
         stakingContract.unstake(300);
     }
+
+    function testGetRewards() public {
+        uint value = 1 ether;
+        stakingContract.stake{value: value}();
+        vm.warp(block.timestamp + 1);
+        uint rewards = stakingContract.getRewards(address(this));
+        assert(rewards == 1 ether);
+    }
+
+    function testComplexGetRewards() public {
+        uint value = 1 ether;
+        stakingContract.stake{value: value}();
+        vm.warp(block.timestamp + 1);
+        stakingContract.stake{value: value}();
+        vm.warp(block.timestamp + 1);
+        uint rewards = stakingContract.getRewards(address(this));
+        assert(rewards == 3 ether);
+    }
+
+    function testClaimRewards() public {
+        uint value = 1 ether;
+        stakingContract.stake{value: value}();
+        vm.warp(block.timestamp + 1);
+        uint before = address(this).balance;
+        stakingContract.claimRewards();
+        uint afterBal = address(this).balance;
+        assert(afterBal > before);
+    }
 }
