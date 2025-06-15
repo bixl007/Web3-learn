@@ -1,0 +1,1 @@
+export const SEED = "abandon ability able about above absent absorb abstract absurd abuse access accident"
