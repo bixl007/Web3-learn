@@ -2,7 +2,6 @@ out/
 cache/
 logs/
 node_modules/
-*.json
 !.gitignore
 !.foundry.toml
 .DS_Store
