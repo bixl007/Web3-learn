@@ -1,12 +1,145 @@
+# =========================
+# Rust
+# =========================
+target/
+**/*.rs.bk
+*.tmp
+*.bak
+*.rlib
+*.dSYM
+*.d
+*.profraw
+*.gcda
+*.gcno
+*.gcov
+*.lst
+*.out
+rustc-ice-*.txt
+.cargo/
+!/tests/run-make/thumb-none-qemu/example/.cargo
+
+# =========================
+# Solana (with Anchor)
+# =========================
+.anchor/
+.mpl_cache/
+*.json
+*.keypair.json
+id.json
+*.idl.json
+
+# =========================
+# Build, Cache, & Dependencies
+# =========================
+node_modules/
+lib/
+dist/
 out/
 cache/
+broadcast/
+/vendor/
+/build/
+/build-rust-analyzer/
+/obj/
+
+# =========================
+# Logs
+# =========================
 logs/
-node_modules/
-!.gitignore
-!.foundry.toml
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# =========================
+# Environment and Secrets
+# =========================
+.env
+.env.local
+.env.*
+.env.*.local
+!.env.example
+.secret
+secrets/
+/.envrc
+/.direnv/
+
+# =========================
+# System
+# =========================
 .DS_Store
 Thumbs.db
+desktop.ini
+
+# =========================
+# Editor
+# =========================
+.idea/
 .vscode/
-.env
-.env.*
-dist
+*.swp
+*.swo
+Session.vim
+.cproject
+*.iml
+.project
+.vim/
+.helix/
+.zed/
+.favorites.json
+.settings/
+.vs/
+.dir-locals.el
+
+# =========================
+# Temporary & Misc
+# =========================
+*~
+\#*
+\#*\#
+.#*
+tags
+tags.*
+TAGS
+TAGS.*
+.valgrindrc
+
+# =========================
+# Python
+# =========================
+__pycache__/
+*.py[cod]
+*$py.class
+
+# =========================
+# Project-specific template files
+# =========================
+/bootstrap.toml
+/config.toml
+/Makefile
+config.mk
+config.stamp
+no_llvm_build
+/dl/
+/doc/
+/inst/
+/llvm/
+/mingw-build/
+/unicode-downloads/
+/library/target/
+/src/bootstrap/target/
+/src/ci/citool/target/
+/src/tools/x/target/
+src/tools/nix-dev-shell/flake.lock
+package-lock.json
+package.json
+/src/doc/rustc-dev-guide/mermaid.min.js
+tests/rustdoc-gui/src/**.lock
+/flake.nix
+flake.lock
+/default.nix
+
+# =========================
+# Exceptions
+# =========================
+!.gitignore
+!.foundry.toml
