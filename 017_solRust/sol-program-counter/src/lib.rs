@@ -1,7 +1,6 @@
 use borsh::{BorshDeserialize, BorshSerialize};
 use solana_program::{
     account_info::{AccountInfo, next_account_info},
-    address_lookup_table::instruction,
     entrypoint,
     entrypoint::ProgramResult,
     msg,

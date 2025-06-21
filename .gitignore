@@ -23,7 +23,6 @@ rustc-ice-*.txt
 # =========================
 .anchor/
 .mpl_cache/
-*.json
 *.keypair.json
 id.json
 *.idl.json
